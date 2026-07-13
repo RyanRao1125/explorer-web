@@ -1,0 +1,117 @@
+/* ==========================================================================
+   about.css — Explorer Robotics About Page
+   Depends on: style.css
+   ========================================================================== */
+
+/* HERO */
+.about-hero {
+  background: var(--green);
+  background-image:
+    radial-gradient(circle at 88% 15%, rgba(247, 189, 45, 0.38), transparent 50%),
+    radial-gradient(circle at 8% 95%, rgba(217, 98, 43, 0.4), transparent 48%);
+  color: var(--cream);
+  padding: 64px 0 56px;
+}
+.about-hero-inner {
+  max-width: 680px;
+}
+.about-hero .eyebrow { color: var(--yellow); }
+.about-hero .eyebrow::before { background: var(--yellow); }
+.about-hero h1 {
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  color: var(--cream);
+  margin-bottom: 1rem;
+}
+.about-hero-accent { color: var(--yellow); }
+.about-hero p {
+  font-size: 1.15rem;
+  opacity: 0.85;
+  max-width: 540px;
+  line-height: 1.7;
+}
+
+/* MISSION */
+.about-mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.about-founded-badge {
+  text-align: center;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.about-founded-year {
+  font-family: var(--font-display);
+  font-size: 5.5rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--yellow);
+}
+.about-founded-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.75;
+}
+.about-founded-sub {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* VALUES */
+.about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* STATS */
+.about-stats-section { border-top: 3px dashed rgba(22,19,16,0.12); border-bottom: 3px dashed rgba(22,19,16,0.12); }
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.about-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 32px 16px;
+  border-right: 2px dashed rgba(22,19,16,0.12);
+}
+.about-stat:last-child { border-right: none; }
+.about-stat strong {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--green);
+  line-height: 1;
+}
+.about-stat span {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+/* JOIN CTA (shared pattern from home) */
+.join-cta { background: var(--green); color: var(--cream); }
+.join-cta h2 { color: var(--cream); }
+.join-cta p { color: rgba(251,246,233,0.8); margin-bottom: 1.5rem; }
+
+@media (max-width: 860px) {
+  .about-mission-grid { grid-template-columns: 1fr; gap: 32px; }
+  .about-values-grid { grid-template-columns: 1fr; }
+  .about-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-stat:nth-child(2) { border-right: none; }
+  .about-stat { border-bottom: 2px dashed rgba(22,19,16,0.12); border-right: none; }
+  .about-stat:last-child { border-bottom: none; }
+}

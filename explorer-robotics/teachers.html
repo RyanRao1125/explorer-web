@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teachers &amp; Mentors — Explorer Robotics</title>
+  <meta name="description" content="Meet the instructors and mentors behind Explorer Robotics.">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/teachers.css">
+  <style>
+    /* Portrait image slot — add to css/teachers.css once real photos are ready */
+    .teachers-photo{
+      position:relative;
+      overflow:hidden;
+      width:160px !important;
+      height:160px !important;
+    }
+    .teachers-portrait{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center;
+      display:block;
+    }
+    .teachers-photo .teachers-initials{
+      position:relative;
+      z-index:0;
+      font-size:2.4rem;
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="nav-brand">
+      <img src="images/logo-badge-nav.png" alt="Explorer Robotics logo">
+      Explorer Robotics
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" id="navToggle">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="history.html">History</a></li>
+      <li><a href="classes.html">Classes</a></li>
+      <li><a href="wro.html">WRO</a></li>
+      <li><a href="events.html">Events &amp; News</a></li>
+      <li><a href="teachers.html" class="active">Teachers</a></li>
+      <li><a href="join.html">Join Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="teachers-hero">
+  <div class="container teachers-hero-inner">
+    <span class="eyebrow">The People Behind the Club</span>
+    <h1>Teachers<br><span class="teachers-hero-accent">&amp; Mentors</span></h1>
+    <p>Our instructors bring real-world engineering experience into every session, helping students build skills that go far beyond the competition floor.</p>
+  </div>
+</section>
+
+<span class="cut-line" aria-hidden="true"></span>
+
+<!-- INSTRUCTORS -->
+<section class="section">
+  <div class="container">
+    <div class="text-center" style="max-width:580px;margin:0 auto 48px;">
+      <span class="eyebrow">Our Team</span>
+      <h2>Expert instructors. Real mentorship.</h2>
+    </div>
+    <div class="teachers-grid">
+
+      <!-- Rice Rao -->
+      <div class="badge teachers-card">
+        <div class="teachers-photo">
+          <img class="teachers-portrait" src="images/teachers/rice-rao.jpg" alt="Portrait of Rice Rao" onerror="this.style.display='none'">
+          <span class="teachers-initials">RR</span>
+        </div>
+        <span class="tag tag-green">Head Coach</span>
+        <h3>Rice Rao</h3>
+        <p class="teachers-role">Head Coach &amp; Founder</p>
+        <p>Head coach of robotics competitions including FLL and WRO. Led teams in winning multiple national and international robotics awards. Over 20 years of IT industry experience as a software engineer working internationally.</p>
+        <div class="teachers-subjects">
+          <span class="teachers-subject">WRO</span>
+          <span class="teachers-subject">FLL</span>
+          <span class="teachers-subject">Team Leadership</span>
+        </div>
+        <p style="font-size:0.8rem;color:var(--text-muted);margin-top:12px;">MSc Electrical &amp; Computer Engineering, University of Alberta &middot; BSc Mathematics, Peking University</p>
+      </div>
+
+      <!-- Michael Veneziano -->
+      <div class="badge teachers-card">
+        <div class="teachers-photo teachers-photo-alt">
+          <img class="teachers-portrait" src="images/teachers/michael-veneziano.jpg" alt="Portrait of Michael Veneziano" onerror="this.style.display='none'">
+          <span class="teachers-initials">MV</span>
+        </div>
+        <span class="tag tag-green">Instructor</span>
+        <h3>Michael Veneziano</h3>
+        <p class="teachers-role">Robotics &amp; Electronics Instructor</p>
+        <p>Professional robotics educator teaching internationally across programming, robotics, and electronics. Topics include Micro:Bit, Arduino, Python, C++, and MakeCode. Led over 20 teams in First Lego League competitions.</p>
+        <div class="teachers-subjects">
+          <span class="teachers-subject">Robotics</span>
+          <span class="teachers-subject">Electronics</span>
+          <span class="teachers-subject">FLL</span>
+          <span class="teachers-subject">C++</span>
+        </div>
+        <p style="font-size:0.8rem;color:var(--text-muted);margin-top:12px;">BSc Energy System Engineering, Ontario Tech University</p>
+      </div>
+
+      <!-- A.J. (anonymized) -->
+      <div class="badge teachers-card">
+        <div class="teachers-photo teachers-photo-alt2">
+          <img class="teachers-portrait" src="images/teachers/silhouette-placeholder.jpg" alt="Portrait not provided" onerror="this.style.display='none'">
+          <span class="teachers-initials">A.J.</span>
+        </div>
+        <span class="tag tag-green">Instructor</span>
+        <h3>A. Joshi</h3>
+        <p class="teachers-role">STEM Educator &amp; Curriculum Developer</p>
+        <p>STEM educator, curriculum developer, and children's book author with over 15 years of experience in STEM education. Passionate about engaging young learners in the engineering design process through hands-on coding and robotics experiences.</p>
+        <div class="teachers-subjects">
+          <span class="teachers-subject">Curriculum Design</span>
+          <span class="teachers-subject">STEM Education</span>
+        </div>
+        <p style="font-size:0.8rem;color:var(--text-muted);margin-top:12px;">M.Sc. in STEM Education, University of Oxford</p>
+      </div>
+
+      <!-- Kenneth Martinez -->
+      <div class="badge teachers-card">
+        <div class="teachers-photo teachers-photo-alt2">
+          <img class="teachers-portrait" src="images/teachers/kenneth-martinez.jpg" alt="Portrait of Kenneth Martinez" onerror="this.style.display='none'">
+          <span class="teachers-initials">KM</span>
+        </div>
+        <span class="tag tag-green">Instructor</span>
+        <h3>Kenneth Martinez</h3>
+        <p class="teachers-role">Instructor</p>
+        <p>Kenneth is not here right now — check back soon for his full bio.</p>
+        <div class="teachers-subjects">
+          <span class="teachers-subject">Placeholder</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider-logo">
+  <img src="images/logo-badge-nav.png" alt="">
+</div>
+
+<!-- TAs -->
+<section class="section-sm">
+  <div class="container" style="max-width:800px;">
+    <div class="text-center" style="margin-bottom:40px;">
+      <span class="eyebrow">Supporting Our Students</span>
+      <h2>Teaching Assistants</h2>
+      <p style="color:var(--text-muted);margin-top:12px;">Every class is also supported by dedicated Teaching Assistants — many of whom are former students who grew up in the club. TAs provide hands-on help during sessions, help students debug their robots and code, and bring energy and enthusiasm to every class.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="images/logo-badge-nav.png" alt="Explorer Robotics logo">
+          Explorer Robotics
+        </div>
+        <p>A robotics club where curiosity meets a toolbox.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="about.html">About Us</a>
+        <a href="history.html">History</a>
+        <a href="classes.html">Classes</a>
+        <a href="wro.html">WRO</a>
+        <a href="events.html">Events &amp; News</a>
+      </div>
+      <div class="footer-col">
+        <h4>Get Involved</h4>
+        <a href="join.html">Join Us</a>
+        <a href="teachers.html">Teachers &amp; Mentors</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Find Us</h4>
+        <p>300 Water Street, Whitby, Ontario</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Explorer Robotics Club. All rights reserved.</span>
+      <img src="images/mascot-badge-circle.png" alt="" class="mascot-wink">
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explorer Robotics</title>
+<meta name="description" content="Explorer Robotics is a club where members learn AI, 3D printing, Python, and competitive robotics. No experience needed, just curiosity.">
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="apple-touch-icon" href="images/favicon-256.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/photos.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="nav-brand">
+      <img src="images/logo-badge-nav.png" alt="Explorer Robotics logo">
+      Explorer Robotics
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" id="navToggle">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="history.html">History</a></li>
+      <li><a href="classes.html">Classes</a></li>
+      <li><a href="wro.html">WRO</a></li>
+      <li><a href="events.html">Events &amp; News</a></li>
+      <li><a href="teachers.html">Teachers</a></li>
+      <li><a href="join.html">Join Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Explorer Robotics Club</span>
+      <h1>We build robots.<br>We solve problems.<br><span class="hero-underline">We explore.</span></h1>
+      <p class="hero-sub">Explorer Robotics is a hands-on club where members design, wire, code, and compete with robots from the ground up. No experience required, just curiosity.</p>
+      <div class="hero-actions">
+        <a href="join.html" class="btn">Join the Club</a>
+        <a href="classes.html" class="btn btn-outline-dark">See Our Classes</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong id="OverallMembers">0</strong><span>Active members</span></div>
+        <div><strong id="InternationalRankings">0</strong><span>International rankings</span></div>
+        <div><strong id="statYears">0</strong><span>Years since 2016</span></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img src="images/logo-full.png" alt="Explorer Robotics - Since 2016" class="hero-built-img">
+    </div>
+  </div>
+</section>
+
+
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <path id="gear-shape" d="M50 8 L58 8 L60 20 L70 24 L80 16 L86 24 L78 33 L83 43 L95 45 L95 53 L83 56 L79 67 L87 76 L80 84 L70 77 L59 81 L57 93 L49 93 L46 81 L36 78 L27 86 L19 78 L27 68 L23 58 L11 56 L11 47 L23 45 L26 34 L18 25 L25 17 L35 24 L45 20 Z" fill="currentColor"/>
+  </defs>
+</svg>
+
+<!-- CLASSES TEASER -->
+<section class="section-sm classes-teaser">
+  <div class="container" style="position:relative;z-index:1;">
+    <div class="text-center" style="max-width:640px;margin:0 auto 40px;">
+      <span class="eyebrow">Learn the skills</span>
+      <h2>Real skills. Zero experience needed.</h2>
+      <p style="color:var(--text);font-size:1.05rem;line-height:1.8;">Whether your child wants to code their first program, design a 3D-printed part, train an AI model, or compete on a world stage, we have a class built for that. Every skill learned here carries far beyond our club.</p>
+    </div>
+    <div class="classes-teaser-pills" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:40px;">
+      <a href="classes.html" class="badge" style="padding:16px 24px;display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <div><strong style="display:block;font-family:var(--font-display);color:var(--green);">AI &amp; Project Planning</strong><span style="font-size:0.82rem;color:var(--text-muted);">Think, plan, and build with AI</span></div>
+      </a>
+      <a href="classes.html" class="badge" style="padding:16px 24px;display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <div><strong style="display:block;font-family:var(--font-display);color:var(--green);">3D Printing</strong><span style="font-size:0.82rem;color:var(--text-muted);">Design and create real parts</span></div>
+      </a>
+      <a href="classes.html" class="badge" style="padding:16px 24px;display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <div><strong style="display:block;font-family:var(--font-display);color:var(--green);">Python</strong><span style="font-size:0.82rem;color:var(--text-muted);">Code from zero to capable with Python</span></div>
+      </a>
+      <a href="classes.html" class="badge" style="padding:16px 24px;display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <div><strong style="display:block;font-family:var(--font-display);color:var(--green);">Lego Robotics</strong><span style="font-size:0.82rem;color:var(--text-muted);">Learn how to build and program Lego robots</span></div>
+      </a>
+      <a href="classes.html" class="badge badge-green" style="padding:16px 24px;display:flex;align-items:center;gap:10px;text-decoration:none;">
+        <div><strong style="display:block;font-family:var(--font-display);color:var(--yellow);">WRO Competition Prep</strong><span style="font-size:0.82rem;color:rgba(251,246,233,0.75);">Train to compete nationally and internationally</span></div>
+      </a>
+    </div>
+    <div class="text-center">
+      <a href="classes.html" class="btn btn-green">View All Classes</a>
+    </div>
+  </div>
+</section>
+
+<span class="cut-line" aria-hidden="true"></span>
+
+<!-- MISSION SNAPSHOT -->
+<section class="section mission">
+  <div class="container mission-grid">
+    <div class="badge mission-card">
+      <span class="tag tag-green">Learn</span>
+      <h3>Build real skills</h3>
+      <p>From Python to AI and 3D printing, members learn hands-on technical skills that go far beyond the classroom.</p>
+    </div>
+    <div class="badge mission-card">
+      <span class="tag tag-yellow">Create</span>
+      <h3>Make something real</h3>
+      <p>Every concept gets applied. Students design, print, program, and build, turning ideas into physical projects they're proud of.</p>
+    </div>
+    <div class="badge mission-card">
+      <span class="tag" style="background:var(--orange)">Compete</span>
+      <h3>Put it to the test</h3>
+      <p>For those who want to go further, we compete in WRO regionally and nationally, applying everything learned in the club.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED -->
+<section class="section featured">
+  <div class="container featured-grid">
+    <div class="featured-art">
+      <div class="photo-slot photo-slot-square">
+        <div class="international-qualifiers-photo-may2026">
+          <span><img src="images/InternationalQualifiersMay2026.jpeg" alt="Latest competition entry"></span>
+        </div>
+      </div>
+    </div>
+    <div class="featured-copy">
+      <span class="eyebrow">Latest competition</span>
+      <h2>Meet Our Latest International Qualifiers</h2>
+      <p>Each season, our teams design a robot from scratch to tackle that year's competition challenge. We are proud to announce our qualification for the international competition!</p>
+      <a href="events.html" class="btn btn-green">View News</a>
+    </div>
+  </div>
+</section>
+
+<div class="divider-logo">
+  <img src="images/logo-badge-nav.png" alt="">
+</div>
+
+<!-- WHY JOIN -->
+<section class="section why hex-texture">
+  <div class="container">
+    <div class="text-center" style="max-width:640px;margin:0 auto 48px;">
+      <span class="eyebrow">Why Explorer Robotics</span>
+      <h2>Skills you can't get from a textbook</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <h4>Real engineering</h4>
+        <p>CAD design, mechanical assembly, electrical wiring, and programming. All skills used in actual engineering careers.</p>
+      </div>
+      <div class="why-item">
+        <h4>Teamwork that matters</h4>
+        <p>Robots don't get built solo. You'll learn to divide work, troubleshoot together, and ship on a deadline.</p>
+      </div>
+      <div class="why-item">
+        <h4>No experience needed</h4>
+        <p>Most members join knowing nothing about robotics. Mentors and senior members teach everything from scratch.</p>
+      </div>
+      <div class="why-item">
+        <h4>Competition experience</h4>
+        <p>Travel to regional, national, and even international events. See how other teams build and test your robot under real pressure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM PHOTOS -->
+<section class="section-sm photo-section">
+  <div class="container">
+    <span class="eyebrow">Our club</span>
+    <h2 style="margin-bottom:8px">The team in action</h2>
+    <p style="color:var(--text-muted);margin-bottom:32px">Real photos from our sessions, competitions, and builds.</p>
+    <div class="photo-grid photo-grid-home">
+      <div class="photo-slot photo-slot-wide">
+        <div class="photo-placeholder">
+          <img src="images/WroHungary.jpg" alt="future engineers working on a robot">
+        </div>
+      </div>
+      <div class="photo-slot">
+        <div class="photo-placeholder">
+          <img src="images/SpecialEventChristmas.png" alt="future engineers working on a robot">
+        </div>
+      </div>
+      <div class="photo-slot">
+        <div class="random-future-engineers-photo">
+          <img src="images/future-engineers-randomimg.jpg" alt="future engineers working on a robot">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- NEWS -->
+<section class="section-sm news">
+  <div class="container">
+    <div class="news-header">
+      <div>
+        <span class="eyebrow">Club news</span>
+        <h2>What's happening</h2>
+      </div>
+      <a href="events.html" class="btn btn-green btn-sm">See Full Calendar</a>
+    </div>
+    <div class="news-grid">
+      <a href="events.html" class="news-feature">
+        <span class="tag tag-yellow news-feature-tag">Big news</span>
+        <h3>Two Teams qualify for WRO Internationals at Puerto Rico!</h3>
+        <p>Our teams have officially qualified for the International Championship after standout performances at the national competition. Congratulations to everyone who put in the long hours to make this happen. Next stop, Internationals!</p>
+        <span class="news-link">Read more →</span>
+      </a>
+      <div class="news-side">
+        <a href="events.html" class="news-item">
+          <span class="news-date">Sept 12, 2026</span>
+          <h4>Second Half of National Competition Starts!</h4>
+          <p>On September 12, our Future Engineers team will be competing in their national competition with hopes of advancing to the international level in Puerto Rico.</p>
+        </a>
+        <a href="events.html" class="news-item">
+          <span class="news-date">May 9, 2026 (past)</span>
+          <h4>First Half of National Competition Starts!</h4>
+          <p>On May 9, our Future Innovators and Robo-Mission teams competed in their national competition. Two teams advanced to the international level.</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section">
+  <div class="container">
+    <div class="why-us-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
+      <div>
+        <span class="eyebrow">Why Explorer Robotics</span>
+        <h2 style="font-size:clamp(2rem,4vw,3rem);margin-bottom:1rem;">Not just another robotics class.</h2>
+        <p style="color:var(--text-muted);font-size:1.1rem;line-height:1.8;">While other programs put kids in front of videos and follow-along kits, we built something different. A real community where students and teachers know each other by name, and every session is spent actually building something.</p>
+        <a href="join.html" class="btn btn-green" style="margin-top:1.5rem;">Join the Club</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:24px;">
+        <div class="badge" style="display:flex;align-items:flex-start;gap:16px;padding:20px 24px;">
+          <div>
+            <h4 style="margin-bottom:4px;">A tight-knit community</h4>
+            <p style="color:var(--text-muted);margin:0;font-size:0.95rem;">Students build real friendships with teammates and teachers. Relationships that last well beyond a single season.</p>
+          </div>
+        </div>
+        <div class="badge" style="display:flex;align-items:flex-start;gap:16px;padding:20px 24px;">
+          <div>
+            <h4 style="margin-bottom:4px;">Hands-on every session</h4>
+            <p style="color:var(--text-muted);margin:0;font-size:0.95rem;">No videos, no passive learning. Every class is spent building, coding, and solving real problems with real tools.</p>
+          </div>
+        </div>
+        <div class="badge" style="display:flex;align-items:flex-start;gap:16px;padding:20px 24px;">
+          <div>
+            <h4 style="margin-bottom:4px;">Small groups, big results</h4>
+            <p style="color:var(--text-muted);margin:0;font-size:0.95rem;">We keep classes small so every student gets real attention, and it shows. Our teams place at nationals and internationals.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- WRO TEASER — full-width photo band -->
+<section class="wro-teaser-band">
+  <div class="wro-teaser-photo">
+    <img src="images/WroHungary.jpg" alt="">
+  </div>
+  <div class="container wro-teaser-content text-center">
+    <span class="eyebrow" style="justify-content:center;">World Robot Olympiad</span>
+    <h2 style="color:var(--cream);">Compete on the world stage</h2>
+    <p style="color:rgba(251,246,233,0.95);max-width:56ch;margin:0 auto 1.5rem;">Explorer Robotics competes in WRO every year across Future Engineers, RoboMission, and Future Innovators, going up against students from over 85 countries.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+      <a href="wro.html" class="btn">Learn About WRO</a>
+      <a href="classes.html" class="btn btn-outline">View Classes</a>
+    </div>
+  </div>
+</section>
+
+
+<section class="section join-cta text-center">
+  <div class="container" style="max-width:640px;">
+    <h2>Ready to build something?</h2>
+    <p>New members are welcome anytime. No robotics background needed. Come to a meeting and see what we're working on.</p>
+    <a href="join.html" class="btn">Join the Club</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="images/logo-badge-nav.png" alt="Explorer Robotics logo">
+          Explorer Robotics
+        </div>
+        <p>A robotics club where curiosity meets a toolbox.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="about.html">About Us</a>
+        <a href="history.html">History</a>
+        <a href="classes.html">Classes</a>
+        <a href="wro.html">WRO</a>
+        <a href="events.html">Events &amp; News</a>
+      </div>
+      <div class="footer-col">
+        <h4>Get Involved</h4>
+        <a href="join.html">Join Us</a>
+        <a href="teachers.html">Teachers &amp; Mentors</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Find Us</h4>
+        <p>300 Water Street, Whitby, Ontario</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> Explorer Robotics Club. All rights reserved.</span>
+      <img src="images/mascot-badge-circle.png" alt="" class="mascot-wink">
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+/* ==========================================================================
+   sponsors.css — Explorer Robotics Sponsors Page
+   Depends on: style.css
+   ========================================================================== */
+
+/* HERO */
+.sponsors-hero {
+  background: var(--green);
+  background-image:
+    radial-gradient(circle at 88% 15%, rgba(247, 189, 45, 0.38), transparent 50%),
+    radial-gradient(circle at 8% 95%, rgba(217, 98, 43, 0.4), transparent 48%);
+  color: var(--cream);
+  padding: 88px 0 72px;
+}
+.sponsors-hero-inner { max-width: 680px; }
+.sponsors-hero .eyebrow { color: var(--yellow); }
+.sponsors-hero .eyebrow::before { background: var(--yellow); }
+.sponsors-hero h1 {
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  color: var(--cream);
+  margin-bottom: 1rem;
+}
+.sponsors-hero-accent { color: var(--yellow); }
+.sponsors-hero p { font-size: 1.15rem; opacity: 0.85; max-width: 540px; line-height: 1.7; }
+
+/* IMPACT */
+.sponsors-impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.sponsors-impact-card {
+  text-align: center;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.sponsors-impact-card strong {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--green);
+  line-height: 1;
+}
+.sponsors-impact-card span {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+/* CURRENT SPONSORS */
+.sponsors-current-section { background: var(--cream); }
+.sponsors-tier-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--green);
+  text-align: center;
+  margin: 32px 0 16px;
+}
+.sponsors-logo-grid {
+  display: grid;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+.sponsors-logo-gold { grid-template-columns: repeat(2, 1fr); }
+.sponsors-logo-silver { grid-template-columns: repeat(3, 1fr); }
+.sponsors-logo-bronze { grid-template-columns: repeat(4, 1fr); }
+
+.sponsors-logo-slot {
+  background: var(--cream-panel);
+  border: 2px dashed rgba(22,19,16,0.2);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  min-height: 100px;
+  transition: border-color 0.2s;
+}
+.sponsors-logo-gold .sponsors-logo-slot { min-height: 140px; }
+.sponsors-logo-slot span {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* TIERS */
+.sponsors-tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.sponsors-tier-card { padding: 36px 28px; }
+.sponsors-tier-icon { font-size: 2.5rem; margin-bottom: 12px; }
+.sponsors-tier-card h3 { font-size: 1.8rem; margin-bottom: 8px; }
+.sponsors-tier-price {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--green);
+  margin-bottom: 20px !important;
+}
+.sponsors-tier-price span { font-size: 1rem; font-weight: 500; opacity: 0.6; }
+.badge-green .sponsors-tier-price { color: var(--yellow); }
+.sponsors-tier-list {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sponsors-tier-list li {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.sponsors-tier-list li::before {
+  content: '✓';
+  font-weight: 800;
+  color: var(--green);
+  flex-shrink: 0;
+}
+.badge-green .sponsors-tier-list li { color: var(--cream); opacity: 0.9; }
+.badge-green .sponsors-tier-list li::before { color: var(--yellow); }
+
+/* FORM */
+.sponsors-form { display: flex; flex-direction: column; gap: 0; }
+.sponsors-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.sponsors-form-group { margin-bottom: 20px; }
+.sponsors-form-group label {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  color: var(--green);
+}
+.sponsors-form-group input,
+.sponsors-form-group select,
+.sponsors-form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid rgba(22,19,16,0.2);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  background: var(--cream-panel);
+  color: var(--ink);
+  transition: border-color 0.15s;
+}
+.sponsors-form-group input:focus,
+.sponsors-form-group select:focus,
+.sponsors-form-group textarea:focus {
+  outline: none;
+  border-color: var(--green);
+}
+.sponsors-form-group textarea { min-height: 120px; resize: vertical; }
+
+@media (max-width: 860px) {
+  .sponsors-impact-grid { grid-template-columns: 1fr; }
+  .sponsors-tiers-grid { grid-template-columns: 1fr; }
+  .sponsors-logo-gold { grid-template-columns: 1fr; }
+  .sponsors-logo-silver { grid-template-columns: repeat(2, 1fr); }
+  .sponsors-logo-bronze { grid-template-columns: repeat(2, 1fr); }
+  .sponsors-form-row { grid-template-columns: 1fr; }
+}

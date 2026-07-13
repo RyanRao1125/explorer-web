@@ -1,0 +1,141 @@
+/* ==========================================================================
+   events.css — Explorer Robotics Events & News Page
+   Depends on: style.css
+   ========================================================================== */
+
+/* HERO */
+.events-hero {
+  background: var(--green);
+  background-image:
+    radial-gradient(circle at 88% 15%, rgba(247, 189, 45, 0.38), transparent 50%),
+    radial-gradient(circle at 8% 95%, rgba(217, 98, 43, 0.4), transparent 48%);
+  color: var(--cream);
+  padding: 88px 0 72px;
+}
+.events-hero-inner { max-width: 680px; }
+.events-hero .eyebrow { color: var(--yellow); }
+.events-hero .eyebrow::before { background: var(--yellow); }
+.events-hero h1 {
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  color: var(--cream);
+  margin-bottom: 1rem;
+}
+.events-hero-accent { color: var(--yellow); }
+.events-hero p { font-size: 1.15rem; opacity: 0.85; max-width: 540px; line-height: 1.7; }
+
+/* FEATURED */
+.events-featured {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 40px;
+  align-items: center;
+  background: var(--green);
+  border: 3px solid var(--ink);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-pop);
+  padding: 40px;
+  margin-top: 24px;
+}
+.events-featured-icon {
+  font-size: 4rem;
+  width: 100px;
+  text-align: center;
+}
+.events-featured-body h2 {
+  color: var(--cream);
+  margin: 12px 0 12px;
+  font-size: 1.8rem;
+}
+.events-featured-body p {
+  color: rgba(251,246,233,0.82);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+.events-featured-date {
+  font-size: 0.82rem;
+  color: rgba(251,246,233,0.5);
+}
+
+/* NEWS GRID */
+.events-section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.events-card { display: flex; flex-direction: column; }
+.events-card h3 { margin: 12px 0 8px; }
+.events-card p { flex: 1; }
+.events-card-date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 16px;
+  display: block;
+}
+
+/* UPCOMING */
+.events-upcoming {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+}
+.events-upcoming-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: var(--cream-panel);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  padding: 20px 24px;
+}
+.events-date-box {
+  background: var(--green);
+  color: var(--cream);
+  border-radius: 8px;
+  padding: 10px 14px;
+  text-align: center;
+  min-width: 60px;
+  flex-shrink: 0;
+}
+.events-date-month {
+  display: block;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+}
+.events-date-day {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--yellow);
+}
+.events-upcoming-info { flex: 1; }
+.events-upcoming-info h3 { font-size: 1rem; margin-bottom: 4px; }
+.events-upcoming-info p { font-size: 0.875rem; color: var(--text-muted); margin: 0; }
+.events-upcoming-tag { flex-shrink: 0; }
+
+/* JOIN CTA */
+.join-cta { background: var(--green); color: var(--cream); }
+.join-cta h2 { color: var(--cream); }
+.join-cta p { color: rgba(251,246,233,0.8); margin-bottom: 1.5rem; }
+
+@media (max-width: 860px) {
+  .events-featured { grid-template-columns: 1fr; }
+  .events-featured-icon { display: none; }
+  .events-grid { grid-template-columns: 1fr 1fr; }
+  .events-upcoming-row { flex-wrap: wrap; }
+  .events-upcoming-tag { order: -1; }
+}
+@media (max-width: 560px) {
+  .events-grid { grid-template-columns: 1fr; }
+}

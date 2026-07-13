@@ -1,0 +1,93 @@
+/* ==========================================================================
+   teachers.css — Explorer Robotics Teachers & Mentors Page
+   Depends on: style.css
+   ========================================================================== */
+
+/* HERO */
+.teachers-hero {
+  background: var(--green);
+  background-image:
+    radial-gradient(circle at 88% 15%, rgba(247, 189, 45, 0.38), transparent 50%),
+    radial-gradient(circle at 8% 95%, rgba(217, 98, 43, 0.4), transparent 48%);
+  color: var(--cream);
+  padding: 88px 0 72px;
+}
+.teachers-hero-inner { max-width: 680px; }
+.teachers-hero .eyebrow { color: var(--yellow); }
+.teachers-hero .eyebrow::before { background: var(--yellow); }
+.teachers-hero h1 {
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  color: var(--cream);
+  margin-bottom: 1rem;
+}
+.teachers-hero-accent { color: var(--yellow); }
+.teachers-hero p { font-size: 1.15rem; opacity: 0.85; max-width: 540px; line-height: 1.7; }
+
+/* GRID */
+.teachers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* CARD */
+.teachers-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 32px 24px;
+}
+.teachers-photo {
+  width: 88px; height: 88px;
+  border-radius: 50%;
+  background: var(--green);
+  border: 3px solid var(--ink);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 16px;
+}
+.teachers-photo.teachers-photo-alt { background: #1a6330; }
+.teachers-photo.teachers-photo-alt2 { background: #0d3d17; }
+.teachers-photo.teachers-photo-alt3 { background: #1e5c35; }
+.teachers-initials {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--yellow);
+  letter-spacing: 1px;
+}
+.teachers-card h3 { margin: 10px 0 4px; }
+.teachers-role {
+  font-size: 0.82rem;
+  color: var(--orange-dark);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 12px !important;
+}
+.teachers-card p { font-size: 0.9rem; }
+.teachers-subjects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 16px;
+}
+.teachers-subject {
+  background: var(--cream);
+  border: 2px solid rgba(22,19,16,0.15);
+  color: var(--green);
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+/* JOIN CTA */
+.join-cta { background: var(--green); color: var(--cream); }
+.join-cta h2 { color: var(--cream); }
+.join-cta p { color: rgba(251,246,233,0.8); margin-bottom: 1.5rem; }
+
+@media (max-width: 860px) { .teachers-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 540px) { .teachers-grid { grid-template-columns: 1fr; } }

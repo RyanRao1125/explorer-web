@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — Explorer Robotics</title>
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+<!-- LOGIN SCREEN -->
+<div id="loginScreen" class="login-screen">
+  <div class="login-card badge">
+    <img src="images/logo-badge-nav.png" alt="Explorer Robotics" class="login-logo">
+    <h2>Admin Login</h2>
+    <p>Sign in with your GitHub account to access the admin dashboard.</p>
+    <button onclick="location.href='http://localhost:3000/auth/github'" class="btn btn-green login-btn">
+      Sign in with GitHub
+    </button>
+    <p id="loginError" class="login-error" style="display:none">
+      Access denied. Only authorized admins can log in.
+    </p>
+  </div>
+</div>
+
+<!-- ADMIN DASHBOARD -->
+<div id="dashboard" style="display:none">
+
+  <div class="admin-header">
+    <div class="admin-header-brand">
+      <img src="images/logo-badge-nav.png" alt="Explorer Robotics" height="44">
+      <span>Explorer Robotics — Admin</span>
+    </div>
+    <div class="admin-header-right">
+      <span id="adminUsername" class="admin-username"></span>
+      <a href="http://localhost:3000/auth/logout" class="btn btn-sm">Log out</a>
+    </div>
+  </div>
+
+  <div class="admin-body">
+
+    <!-- Stats row -->
+    <div class="admin-stats">
+      <div class="stat-card stat-card-primary">
+        <strong id="statTotal">—</strong>
+        <span>Total Registrations</span>
+      </div>
+      <div class="stat-card">
+        <strong id="statPending">—</strong>
+        <span>Pending</span>
+      </div>
+      <div class="stat-card">
+        <strong id="statContacted">—</strong>
+        <span>Contacted</span>
+      </div>
+      <div class="stat-card">
+        <strong id="statConfirmed">—</strong>
+        <span>Confirmed</span>
+      </div>
+    </div>
+
+    <!-- Grade breakdown -->
+    <div class="admin-grade-stats">
+      <h4 class="admin-section-label">Registrations by Grade</h4>
+      <div class="grade-stats-grid" id="gradeStatsGrid">
+        <!-- filled by JS -->
+      </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="admin-filters">
+      <input type="text" id="searchInput" placeholder="Search by name, email, or grade..." class="admin-search">
+      <select id="statusFilter" class="admin-select">
+        <option value="">All statuses</option>
+        <option value="pending">Pending</option>
+        <option value="contacted">Contacted</option>
+        <option value="confirmed">Confirmed</option>
+      </select>
+      <select id="gradeFilter" class="admin-select">
+        <option value="">All grades</option>
+        <option>Grade 1</option><option>Grade 2</option><option>Grade 3</option>
+        <option>Grade 4</option><option>Grade 5</option><option>Grade 6</option>
+        <option>Grade 7</option><option>Grade 8</option><option>Grade 9</option>
+        <option>Grade 10</option><option>Grade 11</option><option>Grade 12</option>
+      </select>
+    </div>
+
+    <!-- Table -->
+    <div class="admin-table-wrap">
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Student</th>
+            <th>Grade</th>
+            <th>Parent</th>
+            <th>Parent Email</th>
+            <th>Registered</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="registrationsTable">
+          <tr><td colspan="8" class="table-loading">Loading...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+<script src="js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+/* ==========================================================================
+   Photo gallery & placeholder styles — shared across all pages
+   ========================================================================== */
+
+.photo-section { background: var(--cream); }
+
+/* ---------- Grids ---------- */
+.photo-grid {
+  display: grid;
+  gap: 16px;
+}
+
+/* WRO page: 1 large left + 4 smaller in 2x2 right */
+.photo-grid-wro {
+  grid-template-columns: 1.4fr 1fr;
+  grid-template-rows: auto auto;
+}
+.photo-grid-wro .photo-slot-large {
+  grid-row: 1 / 3;
+  min-height: 420px;
+}
+.photo-grid-wro .photo-slot:not(.photo-slot-large) {
+  min-height: 196px;
+}
+
+/* Homepage: 1 wide top + 2 equal below */
+.photo-grid-home {
+  grid-template-columns: 1fr 1fr;
+}
+.photo-grid-home .photo-slot-wide {
+  grid-column: 1 / 3;
+  min-height: 280px;
+}
+.photo-grid-home .photo-slot:not(.photo-slot-wide) {
+  min-height: 220px;
+}
+
+/* Generic square slot (featured section) */
+.photo-slot-square {
+  min-height: 360px;
+  width: 100%;
+}
+
+@media (max-width: 760px) {
+  .photo-grid-wro { grid-template-columns: 1fr; }
+  .photo-grid-wro .photo-slot-large { grid-row: auto; min-height: 260px; }
+  .photo-grid-home { grid-template-columns: 1fr; }
+  .photo-grid-home .photo-slot-wide { grid-column: auto; }
+}
+
+/* ---------- Photo slot (the wrapper) ---------- */
+.photo-slot {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--cream-panel);
+  border: 3px dashed rgba(22,19,16,0.2);
+}
+
+/* When a real <img> is placed inside, it fills the slot */
+.photo-slot img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: calc(var(--radius-md) - 3px);
+}
+
+/* ---------- Placeholder (remove this div when you add a real photo) ---------- */
+.photo-placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 24px;
+  text-align: center;
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(22,19,16,0.02) 0px,
+    rgba(22,19,16,0.02) 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+.photo-placeholder .photo-icon {
+  font-size: 2rem;
+  opacity: 0.5;
+}
+.photo-placeholder strong {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  color: var(--text);
+}
+.photo-placeholder span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ---------- How-to tip ---------- */
+.photo-how-to {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  background: rgba(22,19,16,0.04);
+  border: 1px solid rgba(22,19,16,0.1);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+}
+.photo-how-to code {
+  background: rgba(22,19,16,0.08);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.82rem;
+  font-family: monospace;
+}

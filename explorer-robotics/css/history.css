@@ -1,0 +1,139 @@
+/* ==========================================================================
+   history.css — Explorer Robotics History Page
+   Depends on: style.css
+   ========================================================================== */
+
+/* HERO */
+.history-hero {
+  background: var(--green);
+  background-image:
+    radial-gradient(circle at 88% 15%, rgba(247, 189, 45, 0.38), transparent 50%),
+    radial-gradient(circle at 8% 95%, rgba(217, 98, 43, 0.4), transparent 48%);
+  color: var(--cream);
+  padding: 88px 0 72px;
+}
+.history-hero-inner { max-width: 680px; }
+.history-hero .eyebrow { color: var(--yellow); }
+.history-hero .eyebrow::before { background: var(--yellow); }
+.history-hero h1 {
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  color: var(--cream);
+  margin-bottom: 1rem;
+}
+.history-hero-accent { color: var(--yellow); }
+.history-hero p { font-size: 1.15rem; opacity: 0.85; max-width: 540px; line-height: 1.7; }
+
+/* MILESTONES */
+.history-milestones {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.history-milestone-icon { font-size: 2.5rem; margin-bottom: 12px; }
+
+/* TIMELINE */
+.history-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.history-timeline::before {
+  content: '';
+  position: absolute;
+  left: 72px;
+  top: 0; bottom: 0;
+  width: 3px;
+  background: var(--green);
+  opacity: 0.15;
+}
+
+.history-year-block {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+  position: relative;
+}
+.history-year-label {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--green);
+  width: 72px;
+  flex-shrink: 0;
+  padding-top: 14px;
+  text-align: right;
+  position: relative;
+}
+.history-year-label::after {
+  content: '';
+  position: absolute;
+  right: -24px;
+  top: 20px;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: var(--yellow);
+  border: 3px solid var(--green);
+  transform: translateX(50%);
+}
+
+.history-events {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.history-event-card {
+  background: var(--cream-panel);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
+  box-shadow: var(--shadow-sm);
+}
+.history-event-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+.history-event-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--ink);
+}
+.history-event-meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.history-tag { color: var(--ink) !important; }
+.history-tag-intl { background: #d4edda; color: var(--green) !important; }
+.history-tag-national { background: #fde8d8; color: var(--orange-dark) !important; }
+.history-tag-silver { background: #efefef; color: #555 !important; }
+.history-tag-participated { background: #f5f5f5; color: #777 !important; }
+
+/* CATEGORIES */
+.history-cat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* JOIN CTA */
+.join-cta { background: var(--green); color: var(--cream); }
+.join-cta h2 { color: var(--cream); }
+.join-cta p { color: rgba(251,246,233,0.8); margin-bottom: 1.5rem; }
+
+@media (max-width: 860px) {
+  .history-milestones { grid-template-columns: 1fr; }
+  .history-cat-grid { grid-template-columns: 1fr; }
+  .history-timeline::before { left: 0; }
+  .history-year-block { flex-direction: column; gap: 12px; }
+  .history-year-label { width: auto; text-align: left; padding-top: 0; }
+  .history-year-label::after { display: none; }
+}

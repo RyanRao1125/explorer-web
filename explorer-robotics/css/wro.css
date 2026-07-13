@@ -1,0 +1,115 @@
+/* WRO page specific styles */
+
+.wro-categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.wro-card { padding: 32px; }
+.wro-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.wro-number {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 2rem;
+  color: var(--yellow);
+  line-height: 1;
+}
+.wro-card h3 { font-size: 1.35rem; margin-bottom: 10px; }
+.wro-card > p { color: var(--text-muted); font-size: 0.94rem; margin-bottom: 0; }
+
+.wro-details {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px dashed rgba(22,19,16,0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.wro-detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.wro-detail-item strong {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--orange-dark);
+}
+.wro-detail-item span {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 900px) {
+  .wro-categories { grid-template-columns: 1fr; }
+}
+
+/* Competition pathway */
+.wro-pathway {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 32px;
+}
+.wro-step {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding-bottom: 32px;
+  position: relative;
+}
+.wro-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 19px;
+  top: 44px;
+  bottom: 0;
+  width: 3px;
+  background: var(--yellow);
+  border-radius: 2px;
+}
+.wro-step-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--yellow);
+  border: 3px solid var(--ink);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--ink);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+.wro-step h4 { font-size: 1.05rem; margin-bottom: 4px; }
+.wro-step p { font-size: 0.92rem; color: var(--text-muted); margin: 0; }
+
+/* Official WRO link */
+.wro-official-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 20px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--green);
+  border: 2px solid var(--green);
+  padding: 9px 18px;
+  border-radius: 999px;
+  transition: background 0.15s, color 0.15s;
+}
+.wro-official-link:hover {
+  background: var(--green);
+  color: var(--cream);
+}
