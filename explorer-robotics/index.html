@@ -10,6 +10,93 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/home.css">
 <link rel="stylesheet" href="css/photos.css">
+<style>
+  /* Open House section — scoped styles until merged into home.css */
+  .openhouse-section {
+    padding: 72px 0;
+  }
+  .openhouse-band-inner {
+    display: flex;
+    gap: 40px;
+    align-items: stretch;
+  }
+  .openhouse-poster {
+    flex: 0 0 420px;
+  }
+  .openhouse-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: var(--radius-md);
+    border: 3px solid var(--ink);
+    box-shadow: var(--shadow-pop);
+  }
+  .openhouse-copy {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--cream);
+    background: var(--green);
+    border: 3px solid var(--ink);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-pop);
+    padding: 40px;
+  }
+  .openhouse-copy .eyebrow { color: var(--yellow); }
+  .openhouse-copy .eyebrow::before { background: var(--yellow); }
+  .openhouse-copy h2 {
+    color: var(--cream);
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin: 8px 0 16px;
+  }
+  .openhouse-copy p {
+    color: rgba(251,246,233,0.85);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  .openhouse-details {
+    color: var(--cream);
+    font-size: 1.05rem;
+    margin-bottom: 24px;
+  }
+  .openhouse-stats {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+  }
+  .openhouse-stats div { text-align: left; }
+  .openhouse-stats strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--yellow);
+  }
+  .openhouse-stats span {
+    font-size: 0.82rem;
+    color: rgba(251,246,233,0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .openhouse-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  @media (max-width: 860px) {
+    .openhouse-band-inner { flex-direction: column; }
+    .openhouse-poster { flex-basis: auto; }
+    .openhouse-poster img { max-width: 380px; height: auto; margin: 0 auto; }
+    .openhouse-copy { text-align: center; align-items: center; }
+    .openhouse-stats { justify-content: center; }
+    .openhouse-stats div { text-align: center; }
+    .openhouse-actions { justify-content: center; }
+  }
+</style>
 </head>
 <body>
 
@@ -53,6 +140,33 @@
     </div>
     <div class="hero-art">
       <img src="images/logo-full.png" alt="Explorer Robotics - Since 2016" class="hero-built-img">
+    </div>
+  </div>
+</section>
+
+<!-- OPEN HOUSE -->
+<section class="openhouse-section">
+  <div class="container openhouse-band-inner">
+    <div class="openhouse-poster">
+      <img src="images/openhousebanner.png" alt="Explorer Robotics 10 Year Anniversary Open House banner">
+    </div>
+    <div class="openhouse-copy">
+      <span class="eyebrow">Celebrating 10 years</span>
+      <h2>Open House: Robot &amp; Community</h2>
+      <p>Explorer Robotics is turning 10! Join us for a free Open House featuring a keynote on AI and self-driving cars, hands-on robot-building activities, 3D printing, a Lego Sumo showdown, and a chance to meet our international competition award teams.</p>
+      <div class="openhouse-details">
+        <strong>Sunday, August 30 &middot; 1:00 PM to 3:30 PM</strong><br>
+        300 Water Street, Whitby ON (Cambridge International Academy)
+      </div>
+      <div class="openhouse-stats">
+        <div><strong>500+</strong><span>Students</span></div>
+        <div><strong>15+</strong><span>Int'l Placements</span></div>
+        <div><strong>30+</strong><span>National Awards</span></div>
+      </div>
+      <div class="openhouse-actions">
+        <a href="https://form.jotform.com/212176554376258" target="_blank" rel="noopener" class="btn">Register for Free</a>
+        <a href="events.html" class="btn btn-outline">Full Details</a>
+      </div>
     </div>
   </div>
 </section>

@@ -10,7 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Serve your front-end HTML files
-app.use(express.static('C:\\Users\\rhf41\\OneDrive\\Desktop\\explorer-robotics'));
+app.use(express.static('C:\\Users\\rhf41\\OneDrive\\Desktop\\explorer-web\\explorer-robotics'));
 console.log('Serving static from absolute path');
 
 app.use(cors({ origin: ['http://localhost:3000', 'http://127.0.0.1:3000'], credentials: true }));
