@@ -9,18 +9,25 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Serve your front-end HTML files
-app.use(express.static('C:\\Users\\rhf41\\OneDrive\\Desktop\\explorer-web\\explorer-robotics'));
-console.log('Serving static from absolute path');
+// Serve your front-end HTML files (portable path — works on any machine/host)
+app.use(express.static(path.join(__dirname, '../explorer-robotics')));
+console.log('Serving static from', path.join(__dirname, '../explorer-robotics'));
 
-app.use(cors({ origin: ['http://localhost:3000', 'http://127.0.0.1:3000'], credentials: true }));
+app.use(cors({
+  origin: [
+    'http://localhost:3000',
+    'http://127.0.0.1:3000',
+    process.env.PRODUCTION_URL || 'https://your-app-name.onrender.com'
+  ],
+  credentials: true
+}));
 app.use(express.json());
 app.use(session({
   secret: process.env.SESSION_SECRET || 'fallback',
   resave: false,
   saveUninitialized: false,
   cookie: {
-    secure: false,
+    secure: process.env.NODE_ENV === 'production',
     httpOnly: true,
     sameSite: 'lax'
   }
@@ -31,7 +38,7 @@ app.use(passport.session());
 passport.use(new GitHubStrategy({
   clientID: process.env.GITHUB_CLIENT_ID,
   clientSecret: process.env.GITHUB_CLIENT_SECRET,
-  callbackURL: 'http://localhost:3000/auth/github/callback'
+  callbackURL: process.env.GITHUB_CALLBACK_URL || 'http://localhost:3000/auth/github/callback'
 }, (accessToken, refreshToken, profile, done) => {
   if (profile.username === process.env.ADMIN_GITHUB_USERNAME) {
     return done(null, profile);
